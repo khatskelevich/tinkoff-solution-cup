@@ -5,5 +5,7 @@ Final part of IT's Tinkoff Solution Cup
 
 ## How to launch
 ```
+yarn
+yarn test
 yarn start
 ```
