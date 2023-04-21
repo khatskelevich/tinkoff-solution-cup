@@ -1,0 +1,24 @@
+name: Check
+run-name: ${{ github.actor }} is testing this web application 🚀
+on: 
+  push:
+    branches:
+      - master
+      
+jobs:
+ checks:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+      - name: Setting node
+        uses: actions/setup-node@v3
+        with: 
+          node-version: "18."
+      - name: Install 
+        run: npm ci
+      - name: Build
+        run: npm run build --if-present
+      - name: Test
+        run: npm test
