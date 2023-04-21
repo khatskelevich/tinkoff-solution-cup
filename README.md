@@ -7,5 +7,5 @@ Final part of IT's Tinkoff Solution Cup
 ```
 yarn
 yarn test
-yarn start
+yarn dev
 ```
