@@ -3,7 +3,7 @@ import {ref, reactive} from 'vue'
 import {ElMessageBox} from 'element-plus'
 import {downloadOperation, Operation} from "./downloadOperation";
 
-const props = defineProps<{ dialogVisible: boolean }>()
+const props = defineProps<{ dialogVisible: boolean, id: string | number }>()
 const emit = defineEmits(['close'])
 
 const form = reactive<Operation>({
@@ -24,7 +24,7 @@ const handleClose = (done: () => void) => {
 }
 
 const confirm = () => {
-  downloadOperation(form)
+  downloadOperation(props.id, form)
       .then(() => {
         emit('close', false)
       })
