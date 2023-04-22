@@ -10,6 +10,7 @@ const userData = await getUserData()
   <my-header :user="userData"/>
   <main>
     <balance v-if="userData" :id="userData.id"></balance>
+
   </main>
 </template>
 
