@@ -28,7 +28,7 @@ const toggleBalanceDialog = (value: boolean) => {
         <el-button type="primary" :icon="WalletFilled" round @click="toggleBalanceDialog"/>
       </section>
 
-      <add-expence @close="toggleBalanceDialog" :dialogVisible="dialogVisible"/>
+      <add-expence @close="toggleBalanceDialog" :id="id" :dialogVisible="dialogVisible"/>
     </el-card>
 
     <template #fallback>

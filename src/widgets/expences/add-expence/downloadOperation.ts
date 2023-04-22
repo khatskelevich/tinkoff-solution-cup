@@ -8,6 +8,6 @@ export interface Operation {
     value: number
 }
 
-export async function downloadOperation(operation: Operation): Promise<void> {
-    await axios.post(`${API_URL}/operation.json`, operation).catch(e => {console.log(e)})
+export async function downloadOperation(id: string | number, operation: Operation): Promise<void> {
+    await axios.post(`${API_URL}/:${id}/operation.json`, operation).catch(e => {console.log(e)})
 }
