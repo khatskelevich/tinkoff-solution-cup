@@ -3,7 +3,7 @@ import BalanceSkeleton from "./BalanceSkeleton.vue";
 import axios from "axios";
 import {API_URL} from "../../shared/constants";
 
-const props = defineProps<{ id: string }>()
+const props = defineProps<{ id: number | string }>()
 
 const response = await axios.get(`${API_URL}/balance/${props.id}.json`)
 const data = response.data
