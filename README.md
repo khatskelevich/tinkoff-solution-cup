@@ -8,3 +8,10 @@ Final part of IT's Tinkoff Solution Cup
 yarn
 yarn dev
 ```
+
+или
+
+ ```
+ yarn
+ yarn build
+ ```
