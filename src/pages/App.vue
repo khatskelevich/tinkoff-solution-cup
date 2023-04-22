@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from '../pages/HelloWorld.vue'
 import Loader from "../widgets/loader/Loader.vue";
+import MainPage from "./MainPage.vue";
 
 </script>
 
