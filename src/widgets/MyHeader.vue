@@ -7,21 +7,27 @@ defineProps<{ user: User }>()
 <template>
   <el-page-header :icon="null">
     <template #content>
-      <div class="flex items-center">
+      <div class="header">
         <el-avatar
             :size="32"
             class="mr-3"
             src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
         />
-        <span class="text-large font-600 mr-3"> Walleter </span>
-        <span class="text-sm mr-2 header-text">Expence tracker</span>
+        <p>{{ user.first_name }}'s <span class="header-subtext">expence tracker</span></p>
       </div>
     </template>
   </el-page-header>
 </template>
 
 <style scoped>
-.header-text {
+.header {
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+}
+
+.header-subtext {
   color: var(--el-text-color-regular)
 }
 </style>
