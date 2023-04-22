@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import {ref, reactive} from 'vue'
+import {reactive} from 'vue'
+//@ts-ignore
 import {ElMessageBox} from 'element-plus'
 import {downloadOperation, Operation} from "./downloadOperation";
 
