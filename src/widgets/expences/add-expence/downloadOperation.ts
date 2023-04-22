@@ -9,5 +9,5 @@ export interface Operation {
 }
 
 export async function downloadOperation(operation: Operation): Promise<void> {
-    // await axios.post(`${API_URL}`, operation)
+    await axios.post(`${API_URL}/operation.json`, operation).catch(e => {console.log(e)})
 }
